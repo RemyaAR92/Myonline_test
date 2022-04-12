@@ -1,0 +1,15 @@
+
+    .vertical-center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        text-align: center;
+        width: 100%;
+        .mat-raised-button {
+          margin: 8px 8px 8px 0;
+        }
+        .main-title{ 
+        }
+    }

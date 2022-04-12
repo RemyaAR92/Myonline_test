@@ -1,0 +1,30 @@
+@import "variables";
+.main-header{    
+    background: $st-secondary;
+    color:$st-white;
+} 
+.main-body{
+    height:calc(100% - 64px); 
+    position: relative; 
+    color:$st-black;
+    &.mat-drawer-container{
+        background-color: unset;
+        overflow: hidden;
+    } 
+    .sidebar{
+        .mat-list-item:hover{
+            background-color: $st-clouds;
+        }   
+        .mat-list-item a{
+            color: $st-secondary;
+            text-decoration: none;
+            font-size: 14px;
+            .mat-icon{                
+                 vertical-align: middle;
+            }
+        }
+        .mat-list-base .mat-list-item .mat-list-item-content, .mat-list-base .mat-list-option .mat-list-item-content{        
+                font-size: 13px;
+        }
+    }
+}

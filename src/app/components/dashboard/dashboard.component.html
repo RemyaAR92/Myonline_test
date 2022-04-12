@@ -1,0 +1,24 @@
+<mat-toolbar class="main-header">
+  <button mat-icon-button class="example-icon" (click)="drawer.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>My App</span>
+</mat-toolbar>
+<mat-drawer-container class="main-body" [hasBackdrop]="'false'">
+  <mat-drawer #drawer [mode]="'push'" class="sidebar">
+    <mat-list role="list">
+      <mat-list-item role="listitem">
+        <a [routerLink]="['']"> <mat-icon mat-list-icon>home</mat-icon> <span>Dashboard</span></a>
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        <a [routerLink]="['location-fetch']"> <mat-icon mat-list-icon>my_location</mat-icon> <span>Find Geolocation</span></a>
+      </mat-list-item>
+      <mat-list-item role="listitem"> 
+        <a [routerLink]="['graph-view']"> <mat-icon mat-list-icon>graphic_eq</mat-icon> <span>View Graph</span></a>
+      </mat-list-item>
+    </mat-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

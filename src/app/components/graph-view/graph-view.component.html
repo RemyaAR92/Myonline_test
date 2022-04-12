@@ -1,0 +1,33 @@
+<mat-progress-bar  [mode]="progresstype" [value]="Progressvalue" class="top-progress"></mat-progress-bar>
+<div class="graph-data pagedata" *ngIf="Exchangerate">
+  <form>
+    <mat-form-field appearance="outline">
+      <mat-label>From</mat-label>  
+      <mat-select [(ngModel)]="From" required name="from" id="from" (ngModelChange)="clearconvert()">
+        <ng-container *ngFor="let key of objKeys(Exchangerate);index as i">
+          <mat-option [value]="key">{{Exchangerate[key]?.unit}} - {{Exchangerate[key]?.name}}</mat-option>
+        </ng-container>
+      </mat-select>
+    
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>To</mat-label>
+      <mat-select [(ngModel)]="To" required name="to" id="to" (ngModelChange)="clearconvert()">
+      <ng-container *ngFor="let key of objKeys(Exchangerate);index as i">
+        <mat-option [value]="key" [disabled]="key==From">{{Exchangerate[key]?.unit}} - {{Exchangerate[key]?.name}}</mat-option>
+      </ng-container> 
+      </mat-select> 
+    </mat-form-field>
+    <button mat-raised-button color="primary" [disabled]="!From || !To" (click)="getexchange()">Search</button>
+  </form>
+  <ng-container *ngIf="chartOptions">
+    <ng-container *ngIf="ConvertedData">
+      <h3>Todays converted rate</h3>
+      <p>1 {{From}} = {{ConvertedData.rates[toUppercase(To)]}} {{To}}</p>    
+    </ng-container> 
+    <div class="graph-view">
+    <apx-chart #chart [series]="chartOptions.series" [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis"
+      [title]="chartOptions.title" [tooltip]="chartOptions.tooltip"></apx-chart>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,22 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .graph-data{
+    width: 100%;
+    .mat-form-field,.mat-button-base{
+      margin-left: 8px;
+    }    
+  }
+  .mat-progress-bar.top-progress{    
+    position: absolute;
+    top: 0px;
+    width: 100%;
+  }
+  .graph-view{
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-right: 35px;
+  }
+  

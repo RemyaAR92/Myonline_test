@@ -1,0 +1,47 @@
+<div class="pagedata">
+
+<h1 class="main-title">
+    Find out location
+</h1>
+<div class="Location-fetch">
+<form >
+    <mat-form-field appearance="outline">
+        <mat-label>Enter IP address</mat-label>
+        <input matInput required [(ngModel)]="IPaddress" name="IPaddress" id="IPaddress"> 
+    </mat-form-field>
+    <button mat-raised-button color="primary" [disabled]="!IPaddress || IPaddress.trim()==''" (click)="getlocation()">Search</button>
+</form>
+<ng-container *ngIf="dataSource.length>0">
+<h3>Location details of IP-address</h3>
+<div class="table-container">
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- No Column -->
+    <ng-container matColumnDef="No">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.no}} </td>
+    </ng-container>
+  
+    <!-- Title Column -->
+    <ng-container matColumnDef="Title">
+      <th mat-header-cell *matHeaderCellDef> Title </th>
+      <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+    </ng-container>
+  
+    <!-- Value Column -->
+    <ng-container matColumnDef="Value">
+      <th mat-header-cell *matHeaderCellDef> Value </th>
+      <td mat-cell *matCellDef="let element"> {{element.value}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+</ng-container>
+</div>
+</div>

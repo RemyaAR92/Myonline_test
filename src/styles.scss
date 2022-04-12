@@ -1,0 +1,154 @@
+/* You can add global styles to this file, and also import other style files */
+@import "variables";
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-form-field {
+    font-size: inherit;
+    font-weight: 400;
+    line-height: 1.125;
+    letter-spacing: normal
+  }
+  .mat-form-field-wrapper {
+    padding-bottom: 1.34375em
+  }
+  .mat-form-field-prefix .mat-icon,
+  .mat-form-field-suffix .mat-icon {
+    font-size: 150%;
+    line-height: 1.125
+  }
+  .mat-form-field-prefix .mat-icon-button,
+  .mat-form-field-suffix .mat-icon-button {
+    height: 1.5em;
+    width: 1.5em
+  }
+  .mat-form-field-prefix .mat-icon-button .mat-icon,
+  .mat-form-field-suffix .mat-icon-button .mat-icon {
+    height: 1.125em;
+    line-height: 1.125
+  }
+  .mat-form-field-infix {
+    padding: .5em 0;
+    border-top: .84375em solid transparent
+  }
+  .mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label,
+  .mat-form-field-can-float .mat-input-server:focus+.mat-form-field-label-wrapper .mat-form-field-label {
+    transform: translateY(-1.34375em) scale(0.75);
+    width: 133.3333333333%
+  }
+  .mat-form-field-can-float .mat-input-server[label]:not(:label-shown)+.mat-form-field-label-wrapper .mat-form-field-label {
+    transform: translateY(-1.34374em) scale(0.75);
+    width: 133.3333433333%
+  }
+  .mat-form-field-label-wrapper {
+    top: -0.84375em;
+    padding-top: .84375em
+  }
+  .mat-form-field-label {
+    top: 1.34375em
+  }
+  .mat-form-field-underline {
+    bottom: 1.34375em
+  }
+  .mat-form-field-subscript-wrapper {
+    font-size: 75%;
+    margin-top: .6666666667em;
+    top: calc(100% - 1.7916666667em)
+  }
+  .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+    padding-bottom: 1.25em
+  }
+  .mat-form-field-appearance-legacy .mat-form-field-infix {
+    padding: .4375em 0
+  }
+  .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label,
+  .mat-form-field-appearance-legacy.mat-form-field-can-float .mat-input-server:focus+.mat-form-field-label-wrapper .mat-form-field-label {
+    transform: translateY(-1.28125em) scale(0.75) perspective(100px) translateZ(0.001px);
+    -ms-transform: translateY(-1.28125em) scale(0.75);
+    width: 133.3333333333%
+  }
+  .mat-form-field-appearance-legacy.mat-form-field-can-float .mat-form-field-autofill-control:-webkit-autofill+.mat-form-field-label-wrapper .mat-form-field-label {
+    transform: translateY(-1.28125em) scale(0.75) perspective(100px) translateZ(0.00101px);
+    -ms-transform: translateY(-1.28124em) scale(0.75);
+    width: 133.3333433333%
+  }
+  .mat-form-field-appearance-legacy.mat-form-field-can-float .mat-input-server[label]:not(:label-shown)+.mat-form-field-label-wrapper .mat-form-field-label {
+    transform: translateY(-1.28125em) scale(0.75) perspective(100px) translateZ(0.00102px);
+    -ms-transform: translateY(-1.28123em) scale(0.75);
+    width: 133.3333533333%
+  }
+  .mat-form-field-appearance-legacy .mat-form-field-label {
+    top: 1.28125em
+  }
+  .mat-form-field-appearance-legacy .mat-form-field-underline {
+    bottom: 1.25em
+  }
+  .mat-form-field-appearance-legacy .mat-form-field-subscript-wrapper {
+    margin-top: .5416666667em;
+    top: calc(100% - 1.6666666667em)
+  }
+  @media print {
+  
+    .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label,
+    .mat-form-field-appearance-legacy.mat-form-field-can-float .mat-input-server:focus+.mat-form-field-label-wrapper .mat-form-field-label {
+        transform: translateY(-1.28122em) scale(0.75)
+    }
+    .mat-form-field-appearance-legacy.mat-form-field-can-float .mat-form-field-autofill-control:-webkit-autofill+.mat-form-field-label-wrapper .mat-form-field-label {
+        transform: translateY(-1.28121em) scale(0.75)
+    }
+    .mat-form-field-appearance-legacy.mat-form-field-can-float .mat-input-server[label]:not(:label-shown)+.mat-form-field-label-wrapper .mat-form-field-label {
+        transform: translateY(-1.2812em) scale(0.75)
+    }}
+  .mat-form-field-appearance-fill .mat-form-field-infix {
+    padding: .25em 0 .75em 0
+  }
+  .mat-form-field-appearance-fill .mat-form-field-label {
+    top: 1.09375em;
+    margin-top: -0.5em
+  }
+  .mat-form-field-appearance-fill.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label,
+  .mat-form-field-appearance-fill.mat-form-field-can-float .mat-input-server:focus+.mat-form-field-label-wrapper .mat-form-field-label {
+    transform: translateY(-0.59375em) scale(0.75);
+    width: 133.3333333333%
+  }
+  .mat-form-field-appearance-fill.mat-form-field-can-float .mat-input-server[label]:not(:label-shown)+.mat-form-field-label-wrapper .mat-form-field-label {
+    transform: translateY(-0.59374em) scale(0.75);
+    width: 133.3333433333%
+  }
+  .mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 1em 0 1em 0
+  }
+  .mat-form-field-appearance-outline .mat-form-field-label {
+    top: 1.84375em;
+    margin-top: -0.25em
+  }
+  .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label,
+  .mat-form-field-appearance-outline.mat-form-field-can-float .mat-input-server:focus+.mat-form-field-label-wrapper .mat-form-field-label {
+    transform: translateY(-1.59375em) scale(0.75);
+    width: 133.3333333333%
+  }
+  .mat-form-field-appearance-outline.mat-form-field-can-float .mat-input-server[label]:not(:label-shown)+.mat-form-field-label-wrapper .mat-form-field-label {
+    transform: translateY(-1.59374em) scale(0.75);
+    width: 133.3333433333%
+  }
+  
+.BottomNotification-Snackbar{
+  color: $st-white;
+  &.success{
+      background-color: $st-emerald;
+  }
+  &.danger{
+      background-color: $st-pomegranate;
+  }
+  &.info{
+      background-color: $st-wet-asphalt;
+  }
+}
+
+.pagedata{            
+  padding: 2em;
+}
+
+.mat-drawer-content{
+  overflow: hidden !important;
+}
