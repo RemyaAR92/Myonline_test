@@ -1,6 +1,19 @@
-# AngularTest
+# AngularRunning
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.12.
+Project can be run locally after cloning project use following commands
+npm i 
+npm start
+
+## Project structure
+app - Project components
+    ->components - All view components
+                 ->services - contains all API URLS and method calls. 
+    ->facade - service lies inbetween API call and view layer.
+    ->shared - common components which can be used globally
+assets- Depending style files.
+      ->default.scss - default style file
+      ->variables.scss - full project color / fonts are mentioned here.
 
 ## Development server
 
